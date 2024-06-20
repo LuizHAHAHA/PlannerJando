@@ -1,9 +1,40 @@
-let maxDiv = 35
-let maxDia = 31
+let meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+let mes = document.getElementById("tituloGrid").textContent
+let i = 5
+meses.toString();
+
+function avançaMes(){
+
+  if(i < 11 && i >= 0){
+    i += 1
+    document.getElementById("tituloGrid").textContent=`${meses[i]}`
+    iniciaSite() 
+  }else{
+    document.getElementsByClassName("botaoDI").disabled = true;
+    iniciaSite() 
+  }
+  
+}
+function voltaMes(){
+  if(i <= 11 && i > 0){
+    i -= 1
+    document.getElementById("tituloGrid").textContent=`${meses[i]}`
+    iniciaSite()
+  }else{
+    iniciaSite()
+    document.getElementsByClassName("botaoDI").disabled = true;
+  }
+}
+
+function caxaTexto(){
+  
+}
+
+
+
+
 
 function mes1(){
-let mes = "janeiro"
-
 if(mes == "janeiro"){
   document.getElementById("div1").textContent="";
   document.getElementById("div2").textContent="1";
@@ -44,8 +75,6 @@ if(mes == "janeiro"){
 
 }
 function mes2(){
-let mes = "janeiro"
-
 if(mes == "fevereiro"){
   document.getElementById("div1").textContent="";
   document.getElementById("div2").textContent="";
@@ -86,7 +115,6 @@ if(mes == "fevereiro"){
 
 }
 function mes3(){
-let mes = "janeiro"
 
 if(mes == "março"){
   document.getElementById("div1").textContent="";
@@ -128,7 +156,6 @@ if(mes == "março"){
 
 }
 function mes4(){
-  let mes = "janeiro"
   
   if(mes == "abril"){
     document.getElementById("div1").textContent="1";
@@ -170,7 +197,6 @@ function mes4(){
   
 }
 function mes5(){
-  let mes = "janeiro"
   
   if(mes == "maio"){
     document.getElementById("div1").textContent="";
@@ -212,7 +238,6 @@ function mes5(){
   
 }
 function mes6(){
-  let mes = "janeiro"
   
   if(mes == "junho"){
     document.getElementById("div1").textContent="";
@@ -254,7 +279,6 @@ function mes6(){
   
 }
 function mes7(){
-let mes = "janeiro"
 
 if(mes == "julho"){
   document.getElementById("div1").textContent="";
@@ -296,7 +320,6 @@ if(mes == "julho"){
 
 }
 function mes8(){
-  let mes = "janeiro"
   
   if(mes == "agosto"){
     document.getElementById("div1").textContent="";
@@ -338,7 +361,6 @@ function mes8(){
   
 }
 function mes9(){
-let mes = "janeiro"
 
 if(mes == "setembro"){
   document.getElementById("div1").textContent="";
@@ -380,7 +402,6 @@ if(mes == "setembro"){
 
 }
 function mes10(){
-let mes = "janeiro"
 
 if(mes == "outubro"){
   document.getElementById("div1").textContent="";
@@ -422,7 +443,6 @@ if(mes == "outubro"){
 
 }
 function mes11(){
-  let mes = "janeiro"
   
   if(mes == "novembro"){
     document.getElementById("div1").textContent="";
@@ -464,7 +484,6 @@ function mes11(){
   
 }
 function mes12(){
-  let mes = "janeiro"
   
   if(mes == "dezembro"){
     document.getElementById("div1").textContent="1";
@@ -504,4 +523,18 @@ function mes12(){
     document.getElementById("div35").textContent="";
 }
 }
-  
+function iniciaSite(){
+mes = document.getElementById("tituloGrid").textContent
+mes1()
+mes2()
+mes3()
+mes4()
+mes5()
+mes6()
+mes7()
+mes8()
+mes9()
+mes10()
+mes11()
+mes12()
+}
